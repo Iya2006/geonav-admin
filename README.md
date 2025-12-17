@@ -50,5 +50,41 @@ L'application est "Ready-to-Go" et s'exécute dans n'importe quel navigateur mod
     - Activez la géolocalisation lorsque le navigateur le demande pour une expérience optimale.
     - Utilisez le menu latéral pour naviguer entre la Carte, le Dashboard, les POI et les Utilisateurs.
 
+## 🛠️ Pourquoi l'application ne s'affichait pas ?
+L'application utilise des fichiers `.tsx` (TypeScript + JSX). Les navigateurs ne peuvent pas lire ces fichiers directement. Il est donc **indispensable** d'utiliser un outil comme **Vite** pour transformer ces fichiers en JavaScript compréhensible par le navigateur.
+
+## 💻 Guide de Lancement Local (Installation Correcte)
+
+Suivez ces étapes précisément pour faire fonctionner l'application sur votre machine :
+
+### 1. Installation de Node.js
+Assurez-vous d'avoir **Node.js** (version 18 ou supérieure) installé sur votre ordinateur. Vous pouvez le télécharger sur [nodejs.org](https://nodejs.org/).
+
+### 2. Téléchargement et Préparation
+1. Téléchargez et extrayez le dossier du projet.
+2. Ouvrez un terminal (ou une invite de commande) dans le dossier du projet.
+
+### 3. Installation des dépendances
+Tapez la commande suivante pour installer les outils nécessaires (React, Vite, etc.) :
+```bash
+npm install
+```
+
+### 4. Configuration de la Clé API
+Pour que l'IA fonctionne, vous devez fournir votre clé API Gemini :
+1. Créez un fichier nommé `.env` à la racine du projet.
+2. Ajoutez la ligne suivante dans le fichier :
+   ```env
+   VITE_API_KEY=VOTRE_CLE_API_ICI
+   ```
+   *(Note: Le projet est configuré pour lire soit `process.env.API_KEY` soit vos variables d'environnement système).*
+
+### 5. Lancement de l'Application
+Lancez le serveur de développement avec cette commande :
+```bash
+npm run dev
+```
+Une fois lancée, l'application sera disponible sur **http://localhost:3000** (ou une adresse similaire affichée dans le terminal).
+
 ---
 *Projet finalisé avec une attention particulière à l'esthétique et à la robustesse fonctionnelle.*
