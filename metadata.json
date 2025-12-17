@@ -1,0 +1,7 @@
+{
+  "name": "GeoNav Admin",
+  "description": "Plateforme complète de gestion de Points d'Intérêt (POI), supervision des données et optimisation de trajets assistée par IA.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
